@@ -15,9 +15,8 @@ pipeline {
          }
       }
       stage ('Dockerhub Push') {
-         docker.withRegistry('https://registry.hub.docker.com', 'git') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+         steps {
+            sh 'docker push s9ucab/petclinic:1.0'
          }
       }
    }
