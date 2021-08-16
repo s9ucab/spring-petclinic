@@ -14,7 +14,7 @@ pipeline {
             sh 'docker build . -t spring-clinic'
          }
       }
-      stage ('Dockerhub Push') {
+      stage ('Docker Push') {
          steps {
             sh 'docker push s9ucab/spring-clinic:1.0'
          }
