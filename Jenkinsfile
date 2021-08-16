@@ -13,5 +13,6 @@ pipeline {
             echo 'Docker Build'
             sh 'docker build . -t spring-clinic'
          }
+      }
    }
 }     
