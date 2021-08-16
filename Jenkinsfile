@@ -16,7 +16,7 @@ pipeline {
       }
       stage ('Dockerhub Push') {
          steps {
-            sh 'docker push s9ucab/petclinic:1.0'
+            sh 'docker push s9ucab/spring-clinic:1.0'
          }
       }
    }
