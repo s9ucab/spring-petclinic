@@ -5,7 +5,7 @@ pipeline {
       stage ('Maven Build') {
          steps {
             echo 'Maven Build'
-            sh 'mvnw package -DskipTests'
+            sh './mvnw package -DskipTests'
 	 }
       }
       stage ('Docker Build') {
