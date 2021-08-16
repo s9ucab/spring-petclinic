@@ -5,13 +5,13 @@ pipeline {
       stage ('Maven Build') {
          steps {
             echo 'Maven Build'
-            mvnw package -DskipTests
+            sh 'mvnw package -DskipTests'
 	 }
       }
       stage ('Docker Build') {
          steps {
             echo 'Docker Build'
-            docker build . -t spring-clinic
+            sh 'docker build . -t spring-clinic'
          }
    }
 }     
