@@ -12,11 +12,12 @@ pipeline {
          steps {
             echo 'Docker Build'
             sh 'docker build . -t spring-clinic'
+            sh 'docker tag s9ucab/spring-clinic:latest s9ucab/spring-clinic:${VERSION}'
          }
       }
       stage ('Docker Push') {
          steps {
-            sh 'docker push s9ucab/spring-clinic:1.0'
+                 sh 'docker push s9ucab/spring-clinic:${VERSION}'
          }
       }
    }
