@@ -1,5 +1,5 @@
 pipeline {
-        agent {build}
+        agent { label 'build' }
 
    stages {
       stage ('Maven Build') {
